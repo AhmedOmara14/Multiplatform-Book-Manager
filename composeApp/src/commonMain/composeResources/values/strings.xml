@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="search_hint">Search...</string>
+    <string name="error_request_timeout">Timeout</string>
+    <string name="error_too_many_requests">Too many requests</string>
+    <string name="error_no_internet">No internet connection</string>
+    <string name="error_server">Server error</string>
+    <string name="error_serialization">Serialization error</string>
+    <string name="error_unknown">Unknown error</string>
+</resources>
+
