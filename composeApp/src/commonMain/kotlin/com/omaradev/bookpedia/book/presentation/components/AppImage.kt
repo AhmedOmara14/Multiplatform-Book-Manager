@@ -2,7 +2,9 @@ package com.omaradev.bookpedia.book.presentation.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -26,10 +28,9 @@ import org.jetbrains.compose.resources.painterResource
 fun AppImage(imageUrl: String) {
     Box(
         modifier = Modifier
-            .size(80.dp)
+            .size(110.dp)
             .clip(CircleShape)
             .background(Color.Transparent),
-        contentAlignment = Alignment.Center
     ) {
         SubcomposeAsyncImage(
             model = imageUrl,
@@ -44,7 +45,7 @@ fun AppImage(imageUrl: String) {
             error = {
                 Image(
                     alignment = Alignment.Center,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().background(DarkBlue.copy(.1f)).padding(16.dp),
                     painter = painterResource(Res.drawable.book_error_2),
                     contentDescription = null
                 )

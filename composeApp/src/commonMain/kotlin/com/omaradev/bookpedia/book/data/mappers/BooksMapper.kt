@@ -22,13 +22,13 @@ fun ResultsDto.toBook() : Book {
 
 fun BookDetailsDto.toBook() : Book {
     return Book(
-        id = key.substringAfterLast("/"),
-        title = title,
-        imageUrl = "https://covers.openlibrary.org/b/id/${covers.first()}.jpg",
-        authors = subjectPeople.map { it },
-        description = description.value,
-        languages = subjects.map { it },
-        firstPublishYear = firstPublishDate,
+        id = key?.substringAfterLast("/")?:"",
+        title = title?:"",
+        imageUrl = "https://covers.openlibrary.org/b/id/${covers?.first()}.jpg",
+        authors = subjectPeople?.map { it }?: emptyList(),
+        description = description?.value,
+        languages = subjects?.map { it }?: emptyList(),
+        firstPublishYear = first_publish_date,
         averageRating = null,
         ratingCount = null,
         numPages = null,

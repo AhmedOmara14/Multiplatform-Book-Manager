@@ -6,6 +6,7 @@ pluginManagement {
         google {
             mavenContent {
                 includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("android")
                 includeGroupAndSubgroups("com.android")
                 includeGroupAndSubgroups("com.google")
             }
