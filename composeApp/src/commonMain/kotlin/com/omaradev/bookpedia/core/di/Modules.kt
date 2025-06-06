@@ -7,6 +7,7 @@ import com.omaradev.bookpedia.book.data.repository.BookRepositoryImpl
 import com.omaradev.bookpedia.book.domain.repository.BookRepository
 import org.koin.core.module.dsl.singleOf
 import com.omaradev.bookpedia.book.presentation.book_list.BookListViewModel
+import com.omaradev.bookpedia.book.presentation.book_details.BookDetailsViewModel
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.bind
@@ -19,4 +20,5 @@ val sharedModules = module {
     singleOf(::KtorRemoteDataSource).bind<RemoteDataSource>()
     singleOf(::BookRepositoryImpl).bind<BookRepository>()
     viewModelOf(::BookListViewModel)
+    viewModelOf(::BookDetailsViewModel)
 }
