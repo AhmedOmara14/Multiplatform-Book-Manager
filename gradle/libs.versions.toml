@@ -1,5 +1,5 @@
 [versions]
-agp = "8.5.2"
+agp = "8.6.0"
 android-compileSdk = "35"
 android-minSdk = "24"
 android-targetSdk = "35"
@@ -8,15 +8,15 @@ androidx-appcompat = "1.7.1"
 androidx-constraintlayout = "2.2.1"
 androidx-core-ktx = "1.16.0"
 androidx-espresso-core = "3.6.1"
-androidx-lifecycle = "2.8.3"
+androidx-lifecycle = "2.8.4"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
-compose-plugin = "1.7.0"
+compose-plugin = "1.7.3"
 junit = "4.13.2"
 kotlin = "2.1.0"
 kotlinx-coroutines = "1.9.0"
 kotlinxCollectionsImmutable = "0.3.7"
-navigationCompose = "2.8.0-alpha10"
+navigationCompose = "2.9.0-beta01"
 kotlinSerialization = "1.7.3"
 koin = "4.0.0"
 ktor = "3.0.0"
@@ -25,6 +25,8 @@ ksp = "2.0.21-1.0.27"
 sqlite = "2.5.1"
 room = "2.7.1"
 animationCoreAndroid = "1.8.2"
+composeUi = "1.8.2"             # Added: Version for core Compose UI modules
+composeAnimation = "1.8.2"      # Added: Version for core Compose Animation modules
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }

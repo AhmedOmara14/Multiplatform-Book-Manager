@@ -17,7 +17,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -28,53 +28,66 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     jvm("desktop")
-    
+
     sourceSets {
         val desktopMain by getting
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-
             implementation(libs.koin.android)
             implementation(libs.koin.androidx.compose)
             implementation(libs.ktor.client.okhttp)
+            // Add Android-specific Compose UI/Animation if you need them directly for Android
+            // For example, if you want the Android version of ui-tooling:
+            // debugImplementation(libs.androidx.compose.ui.tooling)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
-            implementation(compose.ui)
+            implementation(compose.ui) // Core Compose UI
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
 
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
+            // Removed duplicated lifecycle dependencies
+            // implementation(libs.androidx.lifecycle.viewmodel)
+            // implementation(libs.androidx.lifecycle.runtime.compose)
+
             implementation(libs.jetbrains.compose.navigation)
             implementation(libs.kotlinx.serialization.json)
+
+            // Room and SQLite are typically Android-specific, consider if commonMain is right for them
+            // For multiplatform persistence, something like SQLDelight might be better.
             implementation(libs.androidx.room.runtime)
             implementation(libs.sqlite.bundled)
+
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
-            api(libs.koin.core)
+            api(libs.koin.core) // Use api() for transitive dependency if other modules depend on Koin core
 
             implementation(libs.bundles.ktor)
             implementation(libs.bundles.coil)
 
             implementation(libs.kotlinx.collections.immutable)
 
+
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
             implementation(libs.ktor.client.okhttp)
+            // If you need compose animation on desktop, ensure it's here too
+            // implementation(libs.androidx.compose.animation)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            // If you need compose animation on iOS, ensure it's here too
+            // implementation(libs.androidx.compose.animation)
         }
     }
 }
