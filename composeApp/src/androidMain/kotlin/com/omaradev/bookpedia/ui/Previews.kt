@@ -2,7 +2,6 @@ package com.omaradev.bookpedia.ui
 
 import android.annotation.SuppressLint
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.omaradev.bookpedia.book.domain.models.Book
 import com.omaradev.bookpedia.book.presentation.book_details.BookDetailsScreenContent

@@ -64,6 +64,9 @@ kotlin {
 
             implementation(libs.bundles.ktor)
             implementation(libs.bundles.coil)
+
+            implementation(libs.kotlinx.collections.immutable)
+
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -104,6 +107,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.animation.core.android)
     debugImplementation(compose.uiTooling)
 }
 
