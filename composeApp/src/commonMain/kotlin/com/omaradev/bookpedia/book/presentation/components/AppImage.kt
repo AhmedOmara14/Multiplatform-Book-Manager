@@ -25,9 +25,9 @@ import com.omaradev.bookpedia.core.presentation.DarkBlue
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
-fun AppImage(imageUrl: String) {
+fun AppImage(imageUrl: String,modifier: Modifier=Modifier) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .size(110.dp)
             .clip(CircleShape)
             .background(Color.Transparent),

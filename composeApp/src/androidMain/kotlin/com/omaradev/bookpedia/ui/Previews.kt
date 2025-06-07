@@ -28,10 +28,13 @@ private fun PreviewBookDetailsScreenContent() {
                     ratingCount = null,
                     numPages = null,
                     numEditions = null
-                )
+                ),
+                isLoading = true
             )
         ),
-        onAction = {}
+        onAction = {
+
+        }
 
     )
 }
