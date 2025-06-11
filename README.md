@@ -13,13 +13,12 @@
 *   **Core Framework:** [Kotlin Multiplatform Mobile (KMM)](https://kotlinlang.org/lp/mobile/)
 *   **UI:** [Jetpack Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/) for declarative UI shared across platforms.
 *   **Programming Language:** [Kotlin](https://kotlinlang.org/) (including Coroutines & Flow for asynchronous operations).
-*   **Architecture:** ** [MVI]
-*   **Navigation:** [Compose Multiplatform Navigation]
+*   **Architecture:** ** MVI
+*   **Navigation:** Compose Multiplatform Navigation
 *   **Networking:** [Ktor Client](https://ktor.io/docs/client-overview.html)
 *   **Dependency Injection:** [Koin](https://insert-koin.io/) 
 *   **Image Loading:** [Coil 3](https://coil-kt.github.io/coil/compose/) (Coil MP for Compose Multiplatform)
 
 ## 📸 Screenshots / Demo
 
-
-![Screen Recording 2025-06-08 at 2 56 44 AM](https://github.com/user-attachments/assets/54f622ed-0890-4381-9dfa-724345f07028)
+![Demo](https://github-production-user-asset-6210df.s3.amazonaws.com/60369343/452676831-54f622ed-0890-4381-9dfa-724345f07028.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250611%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250611T165006Z&X-Amz-Expires=300&X-Amz-Signature=61ecca5440d7752d55e08b2c31e0107b6d0ccffa6358f7177c5ba4152e5b7a59&X-Amz-SignedHeaders=host)
